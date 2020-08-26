@@ -1,0 +1,48 @@
+{
+	"pattrstorage" : 	{
+		"name" : "rooms",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"ue.room::ui::number" : [ 0.0 ],
+					"ue.room::ui::number[1]" : [ 0.0 ],
+					"ue.room::ui::number[2]" : [ 40.0 ],
+					"ue.room::ui::number[3]" : [ 0.1 ],
+					"ue.room::ui::number[4]" : [ 0.0 ],
+					"ue.room::ui::number[5]" : [ 0.0 ],
+					"ue.room::ui::number[6]" : [ 0.0 ],
+					"ue.room::ui::number[7]" : [ 0.0 ],
+					"ue.room[3]::ui::number" : [ 0.0 ],
+					"ue.room[3]::ui::number[1]" : [ 0.0 ],
+					"ue.room[3]::ui::number[2]" : [ 12.790000000000003 ],
+					"ue.room[3]::ui::number[3]" : [ 0.1 ],
+					"ue.room[3]::ui::number[4]" : [ 0.0 ],
+					"ue.room[3]::ui::number[5]" : [ 0.0 ],
+					"ue.room[3]::ui::number[6]" : [ 0.0 ],
+					"ue.room[3]::ui::number[7]" : [ 0.0 ],
+					"ue.room[2]::ui::number" : [ 0.0 ],
+					"ue.room[2]::ui::number[1]" : [ 0.0 ],
+					"ue.room[2]::ui::number[2]" : [ 0.1 ],
+					"ue.room[2]::ui::number[3]" : [ 0.1 ],
+					"ue.room[2]::ui::number[4]" : [ 0.0 ],
+					"ue.room[2]::ui::number[5]" : [ 0.0 ],
+					"ue.room[2]::ui::number[6]" : [ 0.0 ],
+					"ue.room[2]::ui::number[7]" : [ 0.0 ],
+					"ue.room[1]::ui::number" : [ 0.0 ],
+					"ue.room[1]::ui::number[1]" : [ 0.0 ],
+					"ue.room[1]::ui::number[2]" : [ 0.1 ],
+					"ue.room[1]::ui::number[3]" : [ 0.1 ],
+					"ue.room[1]::ui::number[4]" : [ 0.0 ],
+					"ue.room[1]::ui::number[5]" : [ 0.0 ],
+					"ue.room[1]::ui::number[6]" : [ 0.0 ],
+					"ue.room[1]::ui::number[7]" : [ 0.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

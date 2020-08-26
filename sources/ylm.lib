@@ -1,0 +1,100 @@
+declare name        "Spherical Harmonics library";
+declare version     "2.0";
+declare author      "Pierre Lecomte";
+declare license     "GPL";
+declare copyright   "(c) Pierre Lecomte 2017"; 
+
+// Library of N3D spherical harmonics ymn at arbitrary order m, degree n, from associated Legendre polynomials reccurence formulas [5]
+// Note the Condon–Shortley phase is not included ! [5]
+// ACN numbering [2]
+// Spherical coordinates as in [3]
+// References: 
+// [1] Daniel, J. (2000). Représentation de champs acoustiques, application à la transmission et à la reproduction de scènes sonores complexes dans un contexte multimédia. Université Paris 6, Paris, France.
+// [2] Nachbar, C., Zotter, F., Deleflie, E., & Sontacchi, A. (2011). Ambix - A suggested ambisonics format. In Ambisonics Symposium, Lexington.
+// [3] Lecomte, P., Gauthier, P.-A., Langrenne, C., Garcia, A., & Berry, A. (2015). On the use of a Lebedev grid for Ambisonics. In Audio Engineering Society Convention 139. New York.
+// [4] http://ambisonics.ch/standards/channels/
+// [5] https://en.wikipedia.org/wiki/Associated_Legendre_polynomials
+// [6] https://en.wikipedia.org/wiki/Gamma_function
+// [7] Arfken, G. (1985). Mathematical Methods for Physicists (3rd ed.). New York: Academic press. p.548
+// [8] https://en.wikipedia.org/wiki/Chebyshev_polynomials
+
+import("stdfaust.lib");
+
+// FACTORIAL [6]
+factorial(n) = ma.gamma(n+1);
+
+
+// DOUBLE FACTORIAL [7]
+factorial2(n) = 2^(n/2 + 1/4*(1 - cos(n*ma.PI)))*ma.PI^(1/4*(-1 + cos(n*ma.PI)))*ma.gamma(1+n/2);
+
+//factorial2 = case{
+//                (0) => 1;
+//                (1) => 1;
+//                (n) => n*factorial2(n-2);
+//                };
+
+// LEGENDRE POLYNOMIALS
+legendre(m,x) = case{
+                (0) => 1;
+                (1) => x;
+                (m) => ((2*m-1)*x*legendre(m-1,x) - (m-1)*legendre(m-2,x))/m;
+                }(m);
+
+// ASSOCIATED LEGENDRE POLYNOMIALS
+alegendre(m,n,x) =  case{
+                (1,0,1) => 1; // special case to avoid evaluate factorial2(-1)
+                (1,0,0) => factorial2(2*m-1)*(1-x^2)^(m/2); // (1)^m not included here
+                (0,1,0) => x*(2*m-1)*alegendre(m-1,m-1,x);
+                (0,0,0) => 1/(m-n)*((2*m-1)*x*alegendre(m-1,n,x)-(m-1+n)*alegendre(m-2,n,x));
+                }(n==m,n==(m-1),m==0);
+                
+                
+// CHEBYSHEV POLYNOMIALS 2ND KIND
+chebyshev2(n,x) = case{
+                (0) => 1;
+                (1) => 2*x;
+                (n) => 2*x*chebyshev2(n-1,x) - chebyshev2(n-2,x);
+                }(n);
+                
+
+// N3D NORM
+n3d(m,n) =  sqrt((2*m+1)*factorial(m-abs(n))/factorial(m+abs(n)))*
+            case{
+            (0) => 1;
+            (n) => sqrt(2);
+            }(n);
+               
+// SPHERICAL HARMONIC         
+ymn(m,n,t,d) = n3d(m,n)*alegendre(m,abs(n),sin(d))*
+            case{
+            //(1) => sin(abs(n)*t);
+            (1) => chebyshev2(abs(n)-1,cos(t))*sin(t); // [8];
+            //(0) => cos(abs(n)*t);
+            (0) => ma.chebychev(abs(n),cos(t)); // [8]
+            }(n<0);
+
+// DEFINITION WITH 1 SUBSCRIPT ACN
+acn(m,n)=m^2+m+n;
+
+yacn(i,t,d) = ymn(m,n,t,d) with 
+            {
+                m = int(sqrt(i));
+                n = int(i - m^2 -m);
+            };
+
+// VECTOR OF SPHERICAL HARMONICS : SIGNAL MULTIPLIED BY SPHERICAL HARMONICS
+yvec(i,t,d) = par(j,i,_*yacn(j,t,d));
+
+// GAMMA ANGLE BETWEEN VIRTUAL SOURCE (T1,D1) AND SPEAKER (T2,D2)
+angle(t1,d1,t2,d2) = cos(d1)*cos(d2)*cos(t1-t2)+sin(d1)*sin(d2);
+
+// BUS WITH GAIN
+buswg(c) = R(c) with {
+  R((c,cl)) = R(c),R(cl);
+  R(1)      = _;
+  //R(0)      = !;
+  R(0)      = !:0; // if you need to preserve the number of outputs
+  R(float(0)) = R(0);
+  R(float(1)) = R(1);
+  R(c)      = *(c);
+};
