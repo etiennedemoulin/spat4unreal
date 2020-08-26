@@ -9,9 +9,9 @@ faust2w64max6 ue.source.dsp
 
 ##circle
 For MacOS Max external : 
-? ask to Yann how to compile mxo in command line.
+Use XCode.
 For Win64 Max external : 
-? ..
+Use VS2019
 
 
 ##ue.rotator

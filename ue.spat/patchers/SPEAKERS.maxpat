@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 259.0, 607.0, 463.0, 248.0 ],
+		"rect" : [ 259.0, 611.0, 463.0, 244.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,8 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 237.0, 197.0, 87.0, 22.0 ],
-					"text" : "loadmess -127"
+					"patching_rect" : [ 237.0, 197.0, 70.0, 22.0 ],
+					"text" : "loadmess 0"
 				}
 
 			}
@@ -153,7 +153,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "list" ],
 					"patching_rect" : [ 12.0, 101.0, 271.0, 22.0 ],
-					"text" : "ue.speaker_config1~"
+					"text" : "ue.speaker~"
 				}
 
 			}
@@ -491,7 +491,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "spat5.monitor.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -503,7 +503,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "ue.speaker_config1~.mxo",
+				"name" : "ue.speaker~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -563,9 +563,9 @@
 , 			{
 				"name" : "Default M4L",
 				"default" : 				{
-					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 11.0 ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-					"fontsize" : [ 11.0 ]
+					"fontname" : [ "Arial Bold" ]
 				}
 ,
 				"parentstyle" : "",
@@ -574,9 +574,9 @@
 , 			{
 				"name" : "Default M4L Poletti",
 				"default" : 				{
-					"fontname" : [ "Arial Bold" ],
+					"fontsize" : [ 10.0 ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-					"fontsize" : [ 10.0 ]
+					"fontname" : [ "Arial Bold" ]
 				}
 ,
 				"parentstyle" : "",
@@ -585,7 +585,7 @@
 , 			{
 				"name" : "Default M4L-1",
 				"default" : 				{
-					"fontname" : [ "Arial" ],
+					"fontsize" : [ 11.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -595,8 +595,8 @@
 						"proportion" : 0.39
 					}
 ,
-					"fontface" : [ 1 ],
-					"fontsize" : [ 11.0 ]
+					"fontname" : [ "Arial" ],
+					"fontface" : [ 1 ]
 				}
 ,
 				"parentstyle" : "",
@@ -627,7 +627,7 @@
 , 			{
 				"name" : "jbb",
 				"default" : 				{
-					"fontname" : [ "Arial" ],
+					"fontsize" : [ 9.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -637,7 +637,7 @@
 						"proportion" : 0.39
 					}
 ,
-					"fontsize" : [ 9.0 ]
+					"fontname" : [ "Arial" ]
 				}
 ,
 				"parentstyle" : "",

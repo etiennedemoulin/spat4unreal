@@ -2,14 +2,14 @@
 author: "AmbisonicDecoderToolkit"
 copyright: "(c) Aaron J. Heller 2013"
 license: "BSD 3-Clause License"
-name: "st_etienne_9_4h4v_allrad_5200_rE_max_2_band"
+name: "ue_speaker_4h4v_allrad_5200_rE_max_2_band"
 version: "1.3"
 Code generated with Faust 2.26.2 (https://faust.grame.fr)
 Compilation options: -lang cpp -double -ftz 0
 ------------------------------------------------------------ */
 
-#ifndef  __ue_speaker_config1_H__
-#define  __ue_speaker_config1_H__
+#ifndef  __ue_speaker_H__
+#define  __ue_speaker_H__
 
 /************************************************************************
 
@@ -7548,7 +7548,7 @@ using namespace std;
 
 
 #ifndef FAUSTCLASS 
-#define FAUSTCLASS ue_speaker_config1
+#define FAUSTCLASS ue_speaker
 #endif
 
 #ifdef __APPLE__ 
@@ -7556,7 +7556,7 @@ using namespace std;
 #define exp10 __exp10
 #endif
 
-class ue_speaker_config1 : public dsp {
+class ue_speaker : public dsp {
 	
  public:
 	
@@ -7600,17 +7600,17 @@ class ue_speaker_config1 : public dsp {
 	double fConst22;
 	double fConst23;
 	double fConst24;
-	double fRec23[2];
-	double fRec21[2];
 	double fConst25;
 	double fConst26;
+	double fRec26[2];
+	double fRec24[2];
+	double fRec23[2];
+	double fRec21[2];
 	double fConst27;
 	double fConst28;
 	double fConst29;
 	double fRec29[2];
 	double fRec27[2];
-	double fRec26[2];
-	double fRec24[2];
 	int IOTA;
 	double fVec0[1024];
 	int iConst30;
@@ -7628,12 +7628,12 @@ class ue_speaker_config1 : public dsp {
 	double fRec45[2];
 	double fRec44[2];
 	double fRec42[2];
+	double fRec56[2];
+	double fRec54[2];
 	double fRec53[2];
 	double fRec51[2];
 	double fRec59[2];
 	double fRec57[2];
-	double fRec56[2];
-	double fRec54[2];
 	double fVec1[1024];
 	double fConst31;
 	double fConst32;
@@ -7658,13 +7658,13 @@ class ue_speaker_config1 : public dsp {
 	double fRec74[2];
 	double fRec72[2];
 	double fConst39;
+	double fRec86[2];
+	double fRec84[2];
 	double fRec83[2];
 	double fRec81[2];
 	double fConst40;
 	double fRec89[2];
 	double fRec87[2];
-	double fRec86[2];
-	double fRec84[2];
 	double fRec101[2];
 	double fRec99[2];
 	double fRec98[2];
@@ -7679,12 +7679,12 @@ class ue_speaker_config1 : public dsp {
 	double fRec105[2];
 	double fRec104[2];
 	double fRec102[2];
+	double fRec116[2];
+	double fRec114[2];
 	double fRec113[2];
 	double fRec111[2];
 	double fRec119[2];
 	double fRec117[2];
-	double fRec116[2];
-	double fRec114[2];
 	double fRec131[2];
 	double fRec129[2];
 	double fRec128[2];
@@ -7699,12 +7699,12 @@ class ue_speaker_config1 : public dsp {
 	double fRec135[2];
 	double fRec134[2];
 	double fRec132[2];
+	double fRec146[2];
+	double fRec144[2];
 	double fRec143[2];
 	double fRec141[2];
 	double fRec149[2];
 	double fRec147[2];
-	double fRec146[2];
-	double fRec144[2];
 	double fVec2[1024];
 	
  public:
@@ -7712,9 +7712,9 @@ class ue_speaker_config1 : public dsp {
 	void metadata(Meta* m) { 
 		m->declare("author", "AmbisonicDecoderToolkit");
 		m->declare("copyright", "(c) Aaron J. Heller 2013");
-		m->declare("filename", "ue.speaker_config1.dsp");
+		m->declare("filename", "ue.speaker.dsp");
 		m->declare("license", "BSD 3-Clause License");
-		m->declare("name", "st_etienne_9_4h4v_allrad_5200_rE_max_2_band");
+		m->declare("name", "ue_speaker_4h4v_allrad_5200_rE_max_2_band");
 		m->declare("version", "1.3");
 	}
 
@@ -7892,14 +7892,14 @@ class ue_speaker_config1 : public dsp {
 		fConst19 = ((398.50398514348865 / fConst0) + 1.0);
 		fConst20 = (1.0 / fConst19);
 		fConst21 = (797.0079702869773 / (fConst0 * fConst19));
-		fConst22 = (171.60731134128397 / fConst0);
-		fConst23 = (1.0 / (fConst22 + 1.0));
-		fConst24 = (343.21462268256795 / fConst0);
-		fConst25 = (88347.207917353109 / fConst0);
-		fConst26 = (fConst25 + 514.8219340238519);
-		fConst27 = (1.0 / ((fConst26 / fConst0) + 1.0));
-		fConst28 = (353388.83166941244 / fConst0);
-		fConst29 = (fConst28 + 1029.6438680477038);
+		fConst22 = (88347.207917353109 / fConst0);
+		fConst23 = (fConst22 + 514.8219340238519);
+		fConst24 = (1.0 / ((fConst23 / fConst0) + 1.0));
+		fConst25 = (353388.83166941244 / fConst0);
+		fConst26 = (fConst25 + 1029.6438680477038);
+		fConst27 = (171.60731134128397 / fConst0);
+		fConst28 = (1.0 / (fConst27 + 1.0));
+		fConst29 = (343.21462268256795 / fConst0);
 		iConst30 = int(((0.002913628773109936 * fConst0) + 0.5));
 		fConst31 = ((((67292.087012933873 / fConst0) + 497.01091462812366) / fConst0) + 1.0);
 		fConst32 = (1.0 / (fConst0 * fConst31));
@@ -7909,8 +7909,8 @@ class ue_speaker_config1 : public dsp {
 		fConst36 = ((199.25199257174432 / fConst0) + 1.0);
 		fConst37 = (1.0 / fConst36);
 		fConst38 = (398.50398514348865 / (fConst0 * fConst36));
-		fConst39 = (1.0 / ((85.803655670641987 / fConst0) + 1.0));
-		fConst40 = (1.0 / ((((22086.801979338277 / fConst0) + 257.41096701192595) / fConst0) + 1.0));
+		fConst39 = (1.0 / ((((22086.801979338277 / fConst0) + 257.41096701192595) / fConst0) + 1.0));
+		fConst40 = (1.0 / ((85.803655670641987 / fConst0) + 1.0));
 	}
 	
 	virtual void instanceResetUserInterface() {
@@ -7960,22 +7960,22 @@ class ue_speaker_config1 : public dsp {
 			fRec12[l13] = 0.0;
 		}
 		for (int l14 = 0; (l14 < 2); l14 = (l14 + 1)) {
-			fRec23[l14] = 0.0;
+			fRec26[l14] = 0.0;
 		}
 		for (int l15 = 0; (l15 < 2); l15 = (l15 + 1)) {
-			fRec21[l15] = 0.0;
+			fRec24[l15] = 0.0;
 		}
 		for (int l16 = 0; (l16 < 2); l16 = (l16 + 1)) {
-			fRec29[l16] = 0.0;
+			fRec23[l16] = 0.0;
 		}
 		for (int l17 = 0; (l17 < 2); l17 = (l17 + 1)) {
-			fRec27[l17] = 0.0;
+			fRec21[l17] = 0.0;
 		}
 		for (int l18 = 0; (l18 < 2); l18 = (l18 + 1)) {
-			fRec26[l18] = 0.0;
+			fRec29[l18] = 0.0;
 		}
 		for (int l19 = 0; (l19 < 2); l19 = (l19 + 1)) {
-			fRec24[l19] = 0.0;
+			fRec27[l19] = 0.0;
 		}
 		IOTA = 0;
 		for (int l20 = 0; (l20 < 1024); l20 = (l20 + 1)) {
@@ -8024,22 +8024,22 @@ class ue_speaker_config1 : public dsp {
 			fRec42[l34] = 0.0;
 		}
 		for (int l35 = 0; (l35 < 2); l35 = (l35 + 1)) {
-			fRec53[l35] = 0.0;
+			fRec56[l35] = 0.0;
 		}
 		for (int l36 = 0; (l36 < 2); l36 = (l36 + 1)) {
-			fRec51[l36] = 0.0;
+			fRec54[l36] = 0.0;
 		}
 		for (int l37 = 0; (l37 < 2); l37 = (l37 + 1)) {
-			fRec59[l37] = 0.0;
+			fRec53[l37] = 0.0;
 		}
 		for (int l38 = 0; (l38 < 2); l38 = (l38 + 1)) {
-			fRec57[l38] = 0.0;
+			fRec51[l38] = 0.0;
 		}
 		for (int l39 = 0; (l39 < 2); l39 = (l39 + 1)) {
-			fRec56[l39] = 0.0;
+			fRec59[l39] = 0.0;
 		}
 		for (int l40 = 0; (l40 < 2); l40 = (l40 + 1)) {
-			fRec54[l40] = 0.0;
+			fRec57[l40] = 0.0;
 		}
 		for (int l41 = 0; (l41 < 1024); l41 = (l41 + 1)) {
 			fVec1[l41] = 0.0;
@@ -8087,22 +8087,22 @@ class ue_speaker_config1 : public dsp {
 			fRec72[l55] = 0.0;
 		}
 		for (int l56 = 0; (l56 < 2); l56 = (l56 + 1)) {
-			fRec83[l56] = 0.0;
+			fRec86[l56] = 0.0;
 		}
 		for (int l57 = 0; (l57 < 2); l57 = (l57 + 1)) {
-			fRec81[l57] = 0.0;
+			fRec84[l57] = 0.0;
 		}
 		for (int l58 = 0; (l58 < 2); l58 = (l58 + 1)) {
-			fRec89[l58] = 0.0;
+			fRec83[l58] = 0.0;
 		}
 		for (int l59 = 0; (l59 < 2); l59 = (l59 + 1)) {
-			fRec87[l59] = 0.0;
+			fRec81[l59] = 0.0;
 		}
 		for (int l60 = 0; (l60 < 2); l60 = (l60 + 1)) {
-			fRec86[l60] = 0.0;
+			fRec89[l60] = 0.0;
 		}
 		for (int l61 = 0; (l61 < 2); l61 = (l61 + 1)) {
-			fRec84[l61] = 0.0;
+			fRec87[l61] = 0.0;
 		}
 		for (int l62 = 0; (l62 < 2); l62 = (l62 + 1)) {
 			fRec101[l62] = 0.0;
@@ -8147,22 +8147,22 @@ class ue_speaker_config1 : public dsp {
 			fRec102[l75] = 0.0;
 		}
 		for (int l76 = 0; (l76 < 2); l76 = (l76 + 1)) {
-			fRec113[l76] = 0.0;
+			fRec116[l76] = 0.0;
 		}
 		for (int l77 = 0; (l77 < 2); l77 = (l77 + 1)) {
-			fRec111[l77] = 0.0;
+			fRec114[l77] = 0.0;
 		}
 		for (int l78 = 0; (l78 < 2); l78 = (l78 + 1)) {
-			fRec119[l78] = 0.0;
+			fRec113[l78] = 0.0;
 		}
 		for (int l79 = 0; (l79 < 2); l79 = (l79 + 1)) {
-			fRec117[l79] = 0.0;
+			fRec111[l79] = 0.0;
 		}
 		for (int l80 = 0; (l80 < 2); l80 = (l80 + 1)) {
-			fRec116[l80] = 0.0;
+			fRec119[l80] = 0.0;
 		}
 		for (int l81 = 0; (l81 < 2); l81 = (l81 + 1)) {
-			fRec114[l81] = 0.0;
+			fRec117[l81] = 0.0;
 		}
 		for (int l82 = 0; (l82 < 2); l82 = (l82 + 1)) {
 			fRec131[l82] = 0.0;
@@ -8207,22 +8207,22 @@ class ue_speaker_config1 : public dsp {
 			fRec132[l95] = 0.0;
 		}
 		for (int l96 = 0; (l96 < 2); l96 = (l96 + 1)) {
-			fRec143[l96] = 0.0;
+			fRec146[l96] = 0.0;
 		}
 		for (int l97 = 0; (l97 < 2); l97 = (l97 + 1)) {
-			fRec141[l97] = 0.0;
+			fRec144[l97] = 0.0;
 		}
 		for (int l98 = 0; (l98 < 2); l98 = (l98 + 1)) {
-			fRec149[l98] = 0.0;
+			fRec143[l98] = 0.0;
 		}
 		for (int l99 = 0; (l99 < 2); l99 = (l99 + 1)) {
-			fRec147[l99] = 0.0;
+			fRec141[l99] = 0.0;
 		}
 		for (int l100 = 0; (l100 < 2); l100 = (l100 + 1)) {
-			fRec146[l100] = 0.0;
+			fRec149[l100] = 0.0;
 		}
 		for (int l101 = 0; (l101 < 2); l101 = (l101 + 1)) {
-			fRec144[l101] = 0.0;
+			fRec147[l101] = 0.0;
 		}
 		for (int l102 = 0; (l102 < 1024); l102 = (l102 + 1)) {
 			fVec2[l102] = 0.0;
@@ -8239,8 +8239,8 @@ class ue_speaker_config1 : public dsp {
 		instanceClear();
 	}
 	
-	virtual ue_speaker_config1* clone() {
-		return new ue_speaker_config1();
+	virtual ue_speaker* clone() {
+		return new ue_speaker();
 	}
 	
 	virtual int getSampleRate() {
@@ -8248,7 +8248,7 @@ class ue_speaker_config1 : public dsp {
 	}
 	
 	virtual void buildUserInterface(UI* ui_interface) {
-		ui_interface->openVerticalBox("st_etienne_9_4h4v_allrad_5200_rE_max_2_band");
+		ui_interface->openVerticalBox("ue_speaker_4h4v_allrad_5200_rE_max_2_band");
 		ui_interface->closeBox();
 	}
 	
@@ -8284,71 +8284,71 @@ class ue_speaker_config1 : public dsp {
 		FAUSTFLOAT* output3 = outputs[3];
 		FAUSTFLOAT* output4 = outputs[4];
 		for (int i = 0; (i < count); i = (i + 1)) {
-			double fTemp0 = double(input0[i]);
-			double fTemp1 = (fConst4 * (0.0 - ((fConst6 * fRec3[1]) + (fConst5 * fRec0[1]))));
-			double fTemp2 = double(input16[i]);
-			double fTemp3 = double(input18[i]);
-			double fTemp4 = double(input21[i]);
-			double fTemp5 = double(input23[i]);
-			double fTemp6 = double(input24[i]);
-			double fTemp7 = double(input17[i]);
-			double fTemp8 = double(input19[i]);
-			double fTemp9 = double(input20[i]);
-			double fTemp10 = double(input22[i]);
-			double fTemp11 = (fConst9 * ((fConst10 * (0.0 - ((fConst12 * fRec9[1]) + (fConst11 * fRec6[1])))) + (fConst13 * ((((((0.0230963582 * fTemp2) + (0.0205103323 * fTemp3)) + (3.1279000000000002e-06 * fTemp4)) + (1.0188000000000001e-06 * fTemp5)) + (0.022543270099999999 * fTemp6)) - ((((4.9402999999999999e-06 * fTemp7) + (1.2525000000000001e-06 * fTemp8)) + (0.0108977365 * fTemp9)) + (0.0062721282999999997 * fTemp10))))));
-			fRec11[0] = (fRec11[1] + fTemp11);
+			double fTemp0 = (fConst4 * (0.0 - ((fConst6 * fRec3[1]) + (fConst5 * fRec0[1]))));
+			double fTemp1 = double(input16[i]);
+			double fTemp2 = double(input18[i]);
+			double fTemp3 = double(input21[i]);
+			double fTemp4 = double(input23[i]);
+			double fTemp5 = double(input24[i]);
+			double fTemp6 = double(input17[i]);
+			double fTemp7 = double(input19[i]);
+			double fTemp8 = double(input20[i]);
+			double fTemp9 = double(input22[i]);
+			double fTemp10 = (fConst9 * ((fConst10 * (0.0 - ((fConst12 * fRec9[1]) + (fConst11 * fRec6[1])))) + (fConst13 * ((((((0.0230963582 * fTemp1) + (0.0205103323 * fTemp2)) + (3.1279000000000002e-06 * fTemp3)) + (1.0188000000000001e-06 * fTemp4)) + (0.022543270099999999 * fTemp5)) - ((((4.9402999999999999e-06 * fTemp6) + (1.2525000000000001e-06 * fTemp7)) + (0.0108977365 * fTemp8)) + (0.0062721282999999997 * fTemp9))))));
+			fRec11[0] = (fRec11[1] + fTemp10);
 			fRec9[0] = fRec11[0];
-			double fRec10 = fTemp11;
+			double fRec10 = fTemp10;
 			fRec8[0] = (fRec9[0] + fRec8[1]);
 			fRec6[0] = fRec8[0];
 			double fRec7 = fRec10;
-			fRec5[0] = (fTemp1 + (fRec7 + fRec5[1]));
+			fRec5[0] = (fTemp0 + (fRec7 + fRec5[1]));
 			fRec3[0] = fRec5[0];
-			double fRec4 = (fRec7 + fTemp1);
+			double fRec4 = (fRec7 + fTemp0);
 			fRec2[0] = (fRec3[0] + fRec2[1]);
 			fRec0[0] = fRec2[0];
 			double fRec1 = fRec4;
-			double fTemp12 = double(input9[i]);
-			double fTemp13 = double(input11[i]);
-			double fTemp14 = double(input14[i]);
-			double fTemp15 = double(input15[i]);
-			double fTemp16 = double(input10[i]);
-			double fTemp17 = double(input12[i]);
-			double fTemp18 = double(input13[i]);
-			double fTemp19 = (fConst16 * ((fConst10 * (0.0 - ((fConst18 * fRec18[1]) + (fConst17 * fRec15[1])))) + (fConst20 * (((((0.025986763999999999 * fTemp12) + (0.0039120018999999999 * fTemp13)) + (3.9028000000000001e-06 * fTemp14)) + (0.00094168470000000005 * fTemp15)) - (((7.6817999999999999e-06 * fTemp16) + (4.4398999999999996e-06 * fTemp17)) + (0.0022162622000000002 * fTemp18))))));
-			fRec20[0] = (fRec20[1] + fTemp19);
+			double fTemp11 = double(input9[i]);
+			double fTemp12 = double(input11[i]);
+			double fTemp13 = double(input14[i]);
+			double fTemp14 = double(input15[i]);
+			double fTemp15 = double(input10[i]);
+			double fTemp16 = double(input12[i]);
+			double fTemp17 = double(input13[i]);
+			double fTemp18 = (fConst16 * ((fConst10 * (0.0 - ((fConst18 * fRec18[1]) + (fConst17 * fRec15[1])))) + (fConst20 * (((((0.025986763999999999 * fTemp11) + (0.0039120018999999999 * fTemp12)) + (3.9028000000000001e-06 * fTemp13)) + (0.00094168470000000005 * fTemp14)) - (((7.6817999999999999e-06 * fTemp15) + (4.4398999999999996e-06 * fTemp16)) + (0.0022162622000000002 * fTemp17))))));
+			fRec20[0] = (fRec20[1] + fTemp18);
 			fRec18[0] = fRec20[0];
-			double fRec19 = fTemp19;
+			double fRec19 = fTemp18;
 			fRec17[0] = (fRec18[0] + fRec17[1]);
 			fRec15[0] = fRec17[0];
 			double fRec16 = fRec19;
-			double fTemp20 = (fConst21 * fRec12[1]);
-			fRec14[0] = ((fRec16 + fRec14[1]) - fTemp20);
+			double fTemp19 = (fConst21 * fRec12[1]);
+			fRec14[0] = ((fRec16 + fRec14[1]) - fTemp19);
 			fRec12[0] = fRec14[0];
-			double fRec13 = (fRec16 - fTemp20);
-			double fTemp21 = double(input1[i]);
-			double fTemp22 = double(input2[i]);
-			double fTemp23 = double(input3[i]);
-			double fTemp24 = (fConst23 * ((((0.20328821750000001 * fTemp21) + (4.8296000000000003e-06 * fTemp22)) + (0.1854689913 * fTemp23)) - (fConst24 * fRec21[1])));
-			fRec23[0] = (fRec23[1] + fTemp24);
-			fRec21[0] = fRec23[0];
-			double fRec22 = fTemp24;
-			double fTemp25 = double(input4[i]);
-			double fTemp26 = double(input7[i]);
-			double fTemp27 = double(input5[i]);
-			double fTemp28 = double(input6[i]);
-			double fTemp29 = double(input8[i]);
-			double fTemp30 = (fConst27 * ((((0.13378697719999999 * fTemp25) + (6.1591e-06 * fTemp26)) - (((2.7234999999999998e-06 * fTemp27) + (0.0634291092 * fTemp28)) + (0.0019487384999999999 * fTemp29))) + (fConst10 * (0.0 - ((fConst29 * fRec27[1]) + (fConst28 * fRec24[1]))))));
-			fRec29[0] = (fRec29[1] + fTemp30);
-			fRec27[0] = fRec29[0];
-			double fRec28 = fTemp30;
-			fRec26[0] = (fRec27[0] + fRec26[1]);
+			double fRec13 = (fRec16 - fTemp19);
+			double fTemp20 = double(input4[i]);
+			double fTemp21 = double(input7[i]);
+			double fTemp22 = double(input5[i]);
+			double fTemp23 = double(input6[i]);
+			double fTemp24 = double(input8[i]);
+			double fTemp25 = (fConst24 * ((((0.13378697719999999 * fTemp20) + (6.1591e-06 * fTemp21)) - (((2.7234999999999998e-06 * fTemp22) + (0.0634291092 * fTemp23)) + (0.0019487384999999999 * fTemp24))) + (fConst10 * (0.0 - ((fConst26 * fRec24[1]) + (fConst25 * fRec21[1]))))));
+			fRec26[0] = (fRec26[1] + fTemp25);
 			fRec24[0] = fRec26[0];
-			double fRec25 = fRec28;
-			fVec0[(IOTA & 1023)] = ((0.2301944641 * fTemp0) + (fRec1 + (fRec13 + (fRec22 + fRec25))));
+			double fRec25 = fTemp25;
+			fRec23[0] = (fRec24[0] + fRec23[1]);
+			fRec21[0] = fRec23[0];
+			double fRec22 = fRec25;
+			double fTemp26 = double(input1[i]);
+			double fTemp27 = double(input2[i]);
+			double fTemp28 = double(input3[i]);
+			double fTemp29 = (fConst28 * ((((0.20328821750000001 * fTemp26) + (4.8296000000000003e-06 * fTemp27)) + (0.1854689913 * fTemp28)) - (fConst29 * fRec27[1])));
+			fRec29[0] = (fRec29[1] + fTemp29);
+			fRec27[0] = fRec29[0];
+			double fRec28 = fTemp29;
+			double fTemp30 = double(input0[i]);
+			fVec0[(IOTA & 1023)] = (fRec1 + (fRec13 + (fRec22 + (fRec28 + (0.2301944641 * fTemp30)))));
 			output0[i] = FAUSTFLOAT((0.5 * fVec0[((IOTA - iConst30) & 1023)]));
 			double fTemp31 = (fConst4 * (0.0 - ((fConst6 * fRec33[1]) + (fConst5 * fRec30[1]))));
-			double fTemp32 = (fConst9 * ((fConst10 * (0.0 - ((fConst12 * fRec39[1]) + (fConst11 * fRec36[1])))) + (fConst13 * (((2.1934999999999998e-06 * fTemp7) + (0.022547609199999999 * fTemp6)) - (((((((0.023096579499999999 * fTemp2) + (0.020516388600000001 * fTemp3)) + (6.4211999999999996e-06 * fTemp8)) + (0.0109112959 * fTemp9)) + (9.3704999999999995e-06 * fTemp4)) + (0.0062744686999999999 * fTemp10)) + (1.3478e-06 * fTemp5))))));
+			double fTemp32 = (fConst9 * ((fConst10 * (0.0 - ((fConst12 * fRec39[1]) + (fConst11 * fRec36[1])))) + (fConst13 * (((2.1934999999999998e-06 * fTemp6) + (0.022547609199999999 * fTemp5)) - (((((((0.023096579499999999 * fTemp1) + (0.020516388600000001 * fTemp2)) + (6.4211999999999996e-06 * fTemp7)) + (0.0109112959 * fTemp8)) + (9.3704999999999995e-06 * fTemp3)) + (0.0062744686999999999 * fTemp9)) + (1.3478e-06 * fTemp4))))));
 			fRec41[0] = (fRec41[1] + fTemp32);
 			fRec39[0] = fRec41[0];
 			double fRec40 = fTemp32;
@@ -8361,7 +8361,7 @@ class ue_speaker_config1 : public dsp {
 			fRec32[0] = (fRec33[0] + fRec32[1]);
 			fRec30[0] = fRec32[0];
 			double fRec31 = fRec34;
-			double fTemp33 = (fConst16 * ((fConst10 * (0.0 - ((fConst18 * fRec48[1]) + (fConst17 * fRec45[1])))) + (fConst20 * (((2.7844e-06 * fTemp17) + (0.00093887579999999999 * fTemp15)) - (((((0.025984324400000001 * fTemp12) + (4.6100000000000003e-08 * fTemp16)) + (0.0039101129000000002 * fTemp13)) + (0.0022167761000000002 * fTemp18)) + (8.4990000000000001e-07 * fTemp14))))));
+			double fTemp33 = (fConst16 * ((fConst10 * (0.0 - ((fConst18 * fRec48[1]) + (fConst17 * fRec45[1])))) + (fConst20 * (((2.7844e-06 * fTemp16) + (0.00093887579999999999 * fTemp14)) - (((((0.025984324400000001 * fTemp11) + (4.6100000000000003e-08 * fTemp15)) + (0.0039101129000000002 * fTemp12)) + (0.0022167761000000002 * fTemp17)) + (8.4990000000000001e-07 * fTemp13))))));
 			fRec50[0] = (fRec50[1] + fTemp33);
 			fRec48[0] = fRec50[0];
 			double fRec49 = fTemp33;
@@ -8372,21 +8372,21 @@ class ue_speaker_config1 : public dsp {
 			fRec44[0] = ((fRec46 + fRec44[1]) - fTemp34);
 			fRec42[0] = fRec44[0];
 			double fRec43 = (fRec46 - fTemp34);
-			double fTemp35 = (fConst23 * ((((4.249e-07 * fTemp22) + (0.18547131319999999 * fTemp23)) - (0.20328497710000001 * fTemp21)) - (fConst24 * fRec51[1])));
-			fRec53[0] = (fRec53[1] + fTemp35);
+			double fTemp35 = (fConst24 * ((0.0 - (((((0.13379248069999999 * fTemp20) + (7.9999999999999996e-07 * fTemp22)) + (0.063443319900000003 * fTemp23)) + (2.8380000000000002e-06 * fTemp21)) + (0.0019493582000000001 * fTemp24))) + (fConst10 * (0.0 - ((fConst26 * fRec54[1]) + (fConst25 * fRec51[1]))))));
+			fRec56[0] = (fRec56[1] + fTemp35);
+			fRec54[0] = fRec56[0];
+			double fRec55 = fTemp35;
+			fRec53[0] = (fRec54[0] + fRec53[1]);
 			fRec51[0] = fRec53[0];
-			double fRec52 = fTemp35;
-			double fTemp36 = (fConst27 * ((0.0 - (((((0.13379248069999999 * fTemp25) + (7.9999999999999996e-07 * fTemp27)) + (0.063443319900000003 * fTemp28)) + (2.8380000000000002e-06 * fTemp26)) + (0.0019493582000000001 * fTemp29))) + (fConst10 * (0.0 - ((fConst29 * fRec57[1]) + (fConst28 * fRec54[1]))))));
+			double fRec52 = fRec55;
+			double fTemp36 = (fConst28 * ((((4.249e-07 * fTemp27) + (0.18547131319999999 * fTemp28)) - (0.20328497710000001 * fTemp26)) - (fConst29 * fRec57[1])));
 			fRec59[0] = (fRec59[1] + fTemp36);
 			fRec57[0] = fRec59[0];
 			double fRec58 = fTemp36;
-			fRec56[0] = (fRec57[0] + fRec56[1]);
-			fRec54[0] = fRec56[0];
-			double fRec55 = fRec58;
-			fVec1[(IOTA & 1023)] = ((0.23018359699999999 * fTemp0) + (fRec31 + (fRec43 + (fRec52 + fRec55))));
+			fVec1[(IOTA & 1023)] = (fRec31 + (fRec43 + (fRec52 + (fRec58 + (0.23018359699999999 * fTemp30)))));
 			output1[i] = FAUSTFLOAT((0.5 * fVec1[((IOTA - iConst30) & 1023)]));
 			double fTemp37 = (fConst32 * (0.0 - ((fConst2 * fRec63[1]) + (fConst1 * fRec60[1]))));
-			double fTemp38 = (fConst33 * ((fConst10 * (0.0 - ((fConst8 * fRec69[1]) + (fConst7 * fRec66[1])))) + (fConst34 * (((1.6873999999999999e-06 * fTemp7) + (0.014866555 * fTemp6)) - (((((((0.0110874123 * fTemp2) + (0.0142640771 * fTemp3)) + (6.6926000000000001e-06 * fTemp8)) + (0.0141184399 * fTemp9)) + (7.7671000000000006e-06 * fTemp4)) + (0.0057598980000000003 * fTemp10)) + (1.1362e-06 * fTemp5))))));
+			double fTemp38 = (fConst33 * ((fConst10 * (0.0 - ((fConst8 * fRec69[1]) + (fConst7 * fRec66[1])))) + (fConst34 * (((1.6873999999999999e-06 * fTemp6) + (0.014866555 * fTemp5)) - (((((((0.0110874123 * fTemp1) + (0.0142640771 * fTemp2)) + (6.6926000000000001e-06 * fTemp7)) + (0.0141184399 * fTemp8)) + (7.7671000000000006e-06 * fTemp3)) + (0.0057598980000000003 * fTemp9)) + (1.1362e-06 * fTemp4))))));
 			fRec71[0] = (fRec71[1] + fTemp38);
 			fRec69[0] = fRec71[0];
 			double fRec70 = fTemp38;
@@ -8399,7 +8399,7 @@ class ue_speaker_config1 : public dsp {
 			fRec62[0] = (fRec63[0] + fRec62[1]);
 			fRec60[0] = fRec62[0];
 			double fRec61 = fRec64;
-			double fTemp39 = (fConst35 * ((fConst10 * (0.0 - ((fConst15 * fRec78[1]) + (fConst14 * fRec75[1])))) + (fConst37 * (((0.0043493454999999999 * fTemp13) + (2.1256999999999998e-06 * fTemp17)) - (((((0.0010998723000000001 * fTemp12) + (8.709e-07 * fTemp16)) + (8.6533000000000007e-06 * fTemp18)) + (3.96e-07 * fTemp14)) + (0.020274701199999998 * fTemp15))))));
+			double fTemp39 = (fConst35 * ((fConst10 * (0.0 - ((fConst15 * fRec78[1]) + (fConst14 * fRec75[1])))) + (fConst37 * (((0.0043493454999999999 * fTemp12) + (2.1256999999999998e-06 * fTemp16)) - (((((0.0010998723000000001 * fTemp11) + (8.709e-07 * fTemp15)) + (8.6533000000000007e-06 * fTemp17)) + (3.96e-07 * fTemp13)) + (0.020274701199999998 * fTemp14))))));
 			fRec80[0] = (fRec80[1] + fTemp39);
 			fRec78[0] = fRec80[0];
 			double fRec79 = fTemp39;
@@ -8410,20 +8410,20 @@ class ue_speaker_config1 : public dsp {
 			fRec74[0] = ((fRec76 + fRec74[1]) - fTemp40);
 			fRec72[0] = fRec74[0];
 			double fRec73 = (fRec76 - fTemp40);
-			double fTemp41 = (fConst39 * ((((0.23523817850000001 * fTemp21) + (9.0689999999999995e-07 * fTemp22)) - (0.18925929929999999 * fTemp23)) - (fConst22 * fRec81[1])));
-			fRec83[0] = (fRec83[1] + fTemp41);
+			double fTemp41 = (fConst39 * ((0.0 - (((((0.098472685099999999 * fTemp20) + (1.1451000000000001e-06 * fTemp22)) + (0.073927123499999997 * fTemp23)) + (1.8510999999999999e-06 * fTemp21)) + (0.0164261632 * fTemp24))) + (fConst10 * (0.0 - ((fConst23 * fRec84[1]) + (fConst22 * fRec81[1]))))));
+			fRec86[0] = (fRec86[1] + fTemp41);
+			fRec84[0] = fRec86[0];
+			double fRec85 = fTemp41;
+			fRec83[0] = (fRec84[0] + fRec83[1]);
 			fRec81[0] = fRec83[0];
-			double fRec82 = fTemp41;
-			double fTemp42 = (fConst40 * ((0.0 - (((((0.098472685099999999 * fTemp25) + (1.1451000000000001e-06 * fTemp27)) + (0.073927123499999997 * fTemp28)) + (1.8510999999999999e-06 * fTemp26)) + (0.0164261632 * fTemp29))) + (fConst10 * (0.0 - ((fConst26 * fRec87[1]) + (fConst25 * fRec84[1]))))));
+			double fRec82 = fRec85;
+			double fTemp42 = (fConst40 * ((((0.23523817850000001 * fTemp26) + (9.0689999999999995e-07 * fTemp27)) - (0.18925929929999999 * fTemp28)) - (fConst27 * fRec87[1])));
 			fRec89[0] = (fRec89[1] + fTemp42);
 			fRec87[0] = fRec89[0];
 			double fRec88 = fTemp42;
-			fRec86[0] = (fRec87[0] + fRec86[1]);
-			fRec84[0] = fRec86[0];
-			double fRec85 = fRec88;
-			output2[i] = FAUSTFLOAT(((0.27572539330000001 * fTemp0) + (fRec61 + (fRec73 + (fRec82 + fRec85)))));
+			output2[i] = FAUSTFLOAT((fRec61 + (fRec73 + (fRec82 + (fRec88 + (0.27572539330000001 * fTemp30))))));
 			double fTemp43 = (fConst32 * (0.0 - ((fConst2 * fRec93[1]) + (fConst1 * fRec90[1]))));
-			double fTemp44 = (fConst33 * ((fConst10 * (0.0 - ((fConst8 * fRec99[1]) + (fConst7 * fRec96[1])))) + (fConst34 * ((((((0.0110871206 * fTemp2) + (0.014257570799999999 * fTemp3)) + (1.9097000000000001e-06 * fTemp4)) + (1.1205999999999999e-06 * fTemp5)) + (0.0148626626 * fTemp6)) - ((((4.6654000000000003e-06 * fTemp7) + (1.8667000000000001e-06 * fTemp8)) + (0.0141093642 * fTemp9)) + (0.0057580477999999999 * fTemp10))))));
+			double fTemp44 = (fConst33 * ((fConst10 * (0.0 - ((fConst8 * fRec99[1]) + (fConst7 * fRec96[1])))) + (fConst34 * ((((((0.0110871206 * fTemp1) + (0.014257570799999999 * fTemp2)) + (1.9097000000000001e-06 * fTemp3)) + (1.1205999999999999e-06 * fTemp4)) + (0.0148626626 * fTemp5)) - ((((4.6654000000000003e-06 * fTemp6) + (1.8667000000000001e-06 * fTemp7)) + (0.0141093642 * fTemp8)) + (0.0057580477999999999 * fTemp9))))));
 			fRec101[0] = (fRec101[1] + fTemp44);
 			fRec99[0] = fRec101[0];
 			double fRec100 = fTemp44;
@@ -8436,7 +8436,7 @@ class ue_speaker_config1 : public dsp {
 			fRec92[0] = (fRec93[0] + fRec92[1]);
 			fRec90[0] = fRec92[0];
 			double fRec91 = fRec94;
-			double fTemp45 = (fConst35 * ((fConst10 * (0.0 - ((fConst15 * fRec108[1]) + (fConst14 * fRec105[1])))) + (fConst37 * (((0.0011024074 * fTemp12) + (3.3668000000000001e-06 * fTemp14)) - (((((6.8379999999999996e-06 * fTemp16) + (0.0043470905999999998 * fTemp13)) + (3.7394999999999999e-06 * fTemp17)) + (8.3486e-06 * fTemp18)) + (0.020272154300000001 * fTemp15))))));
+			double fTemp45 = (fConst35 * ((fConst10 * (0.0 - ((fConst15 * fRec108[1]) + (fConst14 * fRec105[1])))) + (fConst37 * (((0.0011024074 * fTemp11) + (3.3668000000000001e-06 * fTemp13)) - (((((6.8379999999999996e-06 * fTemp15) + (0.0043470905999999998 * fTemp12)) + (3.7394999999999999e-06 * fTemp16)) + (8.3486e-06 * fTemp17)) + (0.020272154300000001 * fTemp14))))));
 			fRec110[0] = (fRec110[1] + fTemp45);
 			fRec108[0] = fRec110[0];
 			double fRec109 = fTemp45;
@@ -8447,20 +8447,20 @@ class ue_speaker_config1 : public dsp {
 			fRec104[0] = ((fRec106 + fRec104[1]) - fTemp46);
 			fRec102[0] = fRec104[0];
 			double fRec103 = (fRec106 - fTemp46);
-			double fTemp47 = (fConst39 * (((4.6701000000000004e-06 * fTemp22) - ((0.2352347501 * fTemp21) + (0.18926148139999999 * fTemp23))) - (fConst22 * fRec111[1])));
-			fRec113[0] = (fRec113[1] + fTemp47);
+			double fTemp47 = (fConst39 * ((((0.098466945 * fTemp20) + (4.7469000000000002e-06 * fTemp21)) - (((2.9341e-06 * fTemp22) + (0.073917140100000001 * fTemp23)) + (0.016425694000000001 * fTemp24))) + (fConst10 * (0.0 - ((fConst23 * fRec114[1]) + (fConst22 * fRec111[1]))))));
+			fRec116[0] = (fRec116[1] + fTemp47);
+			fRec114[0] = fRec116[0];
+			double fRec115 = fTemp47;
+			fRec113[0] = (fRec114[0] + fRec113[1]);
 			fRec111[0] = fRec113[0];
-			double fRec112 = fTemp47;
-			double fTemp48 = (fConst40 * ((((0.098466945 * fTemp25) + (4.7469000000000002e-06 * fTemp26)) - (((2.9341e-06 * fTemp27) + (0.073917140100000001 * fTemp28)) + (0.016425694000000001 * fTemp29))) + (fConst10 * (0.0 - ((fConst26 * fRec117[1]) + (fConst25 * fRec114[1]))))));
+			double fRec112 = fRec115;
+			double fTemp48 = (fConst40 * (((4.6701000000000004e-06 * fTemp27) - ((0.2352347501 * fTemp26) + (0.18926148139999999 * fTemp28))) - (fConst27 * fRec117[1])));
 			fRec119[0] = (fRec119[1] + fTemp48);
 			fRec117[0] = fRec119[0];
 			double fRec118 = fTemp48;
-			fRec116[0] = (fRec117[0] + fRec116[1]);
-			fRec114[0] = fRec116[0];
-			double fRec115 = fRec118;
-			output3[i] = FAUSTFLOAT(((0.27573379920000002 * fTemp0) + (fRec91 + (fRec103 + (fRec112 + fRec115)))));
+			output3[i] = FAUSTFLOAT((fRec91 + (fRec103 + (fRec112 + (fRec118 + (0.27573379920000002 * fTemp30))))));
 			double fTemp49 = (fConst4 * (0.0 - ((fConst6 * fRec123[1]) + (fConst5 * fRec120[1]))));
-			double fTemp50 = (fConst9 * ((fConst10 * (0.0 - ((fConst12 * fRec129[1]) + (fConst11 * fRec126[1])))) + (fConst13 * ((((((3.9864999999999999e-06 * fTemp3) + (1.1529999999999999e-07 * fTemp8)) + (0.0061264010000000001 * fTemp10)) + (0.0050411772999999997 * fTemp5)) + (0.00076485400000000003 * fTemp6)) - ((((3.9816000000000001e-06 * fTemp2) + (7.4180000000000004e-07 * fTemp7)) + (0.029258663800000001 * fTemp9)) + (0.00082388649999999997 * fTemp4))))));
+			double fTemp50 = (fConst9 * ((fConst10 * (0.0 - ((fConst12 * fRec129[1]) + (fConst11 * fRec126[1])))) + (fConst13 * ((((((3.9864999999999999e-06 * fTemp2) + (1.1529999999999999e-07 * fTemp7)) + (0.0061264010000000001 * fTemp9)) + (0.0050411772999999997 * fTemp4)) + (0.00076485400000000003 * fTemp5)) - ((((3.9816000000000001e-06 * fTemp1) + (7.4180000000000004e-07 * fTemp6)) + (0.029258663800000001 * fTemp8)) + (0.00082388649999999997 * fTemp3))))));
 			fRec131[0] = (fRec131[1] + fTemp50);
 			fRec129[0] = fRec131[0];
 			double fRec130 = fTemp50;
@@ -8473,7 +8473,7 @@ class ue_speaker_config1 : public dsp {
 			fRec122[0] = (fRec123[0] + fRec122[1]);
 			fRec120[0] = fRec122[0];
 			double fRec121 = fRec124;
-			double fTemp51 = (fConst16 * ((fConst10 * (0.0 - ((fConst18 * fRec138[1]) + (fConst17 * fRec135[1])))) + (fConst20 * (((((((1.0649999999999999e-07 * fTemp12) + (2.9089999999999999e-07 * fTemp16)) + (0.0024026702 * fTemp17)) + (0.00075272160000000002 * fTemp18)) + (0.0112676185 * fTemp14)) + (0.0039501151999999998 * fTemp15)) - (2.6902000000000001e-06 * fTemp13)))));
+			double fTemp51 = (fConst16 * ((fConst10 * (0.0 - ((fConst18 * fRec138[1]) + (fConst17 * fRec135[1])))) + (fConst20 * (((((((1.0649999999999999e-07 * fTemp11) + (2.9089999999999999e-07 * fTemp15)) + (0.0024026702 * fTemp16)) + (0.00075272160000000002 * fTemp17)) + (0.0112676185 * fTemp13)) + (0.0039501151999999998 * fTemp14)) - (2.6902000000000001e-06 * fTemp12)))));
 			fRec140[0] = (fRec140[1] + fTemp51);
 			fRec138[0] = fRec140[0];
 			double fRec139 = fTemp51;
@@ -8484,18 +8484,18 @@ class ue_speaker_config1 : public dsp {
 			fRec134[0] = ((fRec136 + fRec134[1]) - fTemp52);
 			fRec132[0] = fRec134[0];
 			double fRec133 = (fRec136 - fTemp52);
-			double fTemp53 = (fConst23 * ((((2.1339e-06 * fTemp21) + (0.28445409659999998 * fTemp22)) + (0.0024415831999999998 * fTemp23)) - (fConst24 * fRec141[1])));
-			fRec143[0] = (fRec143[1] + fTemp53);
+			double fTemp53 = (fConst24 * (((((0.13941017720000001 * fTemp23) + (0.0025753426999999998 * fTemp21)) + (0.0092811794000000006 * fTemp24)) - ((4.9107000000000003e-06 * fTemp20) + (5.7339999999999999e-07 * fTemp22))) + (fConst10 * (0.0 - ((fConst26 * fRec144[1]) + (fConst25 * fRec141[1]))))));
+			fRec146[0] = (fRec146[1] + fTemp53);
+			fRec144[0] = fRec146[0];
+			double fRec145 = fTemp53;
+			fRec143[0] = (fRec144[0] + fRec143[1]);
 			fRec141[0] = fRec143[0];
-			double fRec142 = fTemp53;
-			double fTemp54 = (fConst27 * (((((0.13941017720000001 * fTemp28) + (0.0025753426999999998 * fTemp26)) + (0.0092811794000000006 * fTemp29)) - ((4.9107000000000003e-06 * fTemp25) + (5.7339999999999999e-07 * fTemp27))) + (fConst10 * (0.0 - ((fConst29 * fRec147[1]) + (fConst28 * fRec144[1]))))));
+			double fRec142 = fRec145;
+			double fTemp54 = (fConst28 * ((((2.1339e-06 * fTemp26) + (0.28445409659999998 * fTemp27)) + (0.0024415831999999998 * fTemp28)) - (fConst29 * fRec147[1])));
 			fRec149[0] = (fRec149[1] + fTemp54);
 			fRec147[0] = fRec149[0];
 			double fRec148 = fTemp54;
-			fRec146[0] = (fRec147[0] + fRec146[1]);
-			fRec144[0] = fRec146[0];
-			double fRec145 = fRec148;
-			fVec2[(IOTA & 1023)] = (fRec121 + ((0.2456043826 * fTemp0) + (fRec133 + (fRec142 + fRec145))));
+			fVec2[(IOTA & 1023)] = (fRec121 + (fRec133 + (fRec142 + (fRec148 + (0.2456043826 * fTemp30)))));
 			output4[i] = FAUSTFLOAT((0.5 * fVec2[((IOTA - iConst30) & 1023)]));
 			fRec11[1] = fRec11[0];
 			fRec9[1] = fRec9[0];
@@ -8511,12 +8511,12 @@ class ue_speaker_config1 : public dsp {
 			fRec15[1] = fRec15[0];
 			fRec14[1] = fRec14[0];
 			fRec12[1] = fRec12[0];
+			fRec26[1] = fRec26[0];
+			fRec24[1] = fRec24[0];
 			fRec23[1] = fRec23[0];
 			fRec21[1] = fRec21[0];
 			fRec29[1] = fRec29[0];
 			fRec27[1] = fRec27[0];
-			fRec26[1] = fRec26[0];
-			fRec24[1] = fRec24[0];
 			IOTA = (IOTA + 1);
 			fRec41[1] = fRec41[0];
 			fRec39[1] = fRec39[0];
@@ -8532,12 +8532,12 @@ class ue_speaker_config1 : public dsp {
 			fRec45[1] = fRec45[0];
 			fRec44[1] = fRec44[0];
 			fRec42[1] = fRec42[0];
+			fRec56[1] = fRec56[0];
+			fRec54[1] = fRec54[0];
 			fRec53[1] = fRec53[0];
 			fRec51[1] = fRec51[0];
 			fRec59[1] = fRec59[0];
 			fRec57[1] = fRec57[0];
-			fRec56[1] = fRec56[0];
-			fRec54[1] = fRec54[0];
 			fRec71[1] = fRec71[0];
 			fRec69[1] = fRec69[0];
 			fRec68[1] = fRec68[0];
@@ -8552,12 +8552,12 @@ class ue_speaker_config1 : public dsp {
 			fRec75[1] = fRec75[0];
 			fRec74[1] = fRec74[0];
 			fRec72[1] = fRec72[0];
+			fRec86[1] = fRec86[0];
+			fRec84[1] = fRec84[0];
 			fRec83[1] = fRec83[0];
 			fRec81[1] = fRec81[0];
 			fRec89[1] = fRec89[0];
 			fRec87[1] = fRec87[0];
-			fRec86[1] = fRec86[0];
-			fRec84[1] = fRec84[0];
 			fRec101[1] = fRec101[0];
 			fRec99[1] = fRec99[0];
 			fRec98[1] = fRec98[0];
@@ -8572,12 +8572,12 @@ class ue_speaker_config1 : public dsp {
 			fRec105[1] = fRec105[0];
 			fRec104[1] = fRec104[0];
 			fRec102[1] = fRec102[0];
+			fRec116[1] = fRec116[0];
+			fRec114[1] = fRec114[0];
 			fRec113[1] = fRec113[0];
 			fRec111[1] = fRec111[0];
 			fRec119[1] = fRec119[0];
 			fRec117[1] = fRec117[0];
-			fRec116[1] = fRec116[0];
-			fRec114[1] = fRec114[0];
 			fRec131[1] = fRec131[0];
 			fRec129[1] = fRec129[0];
 			fRec128[1] = fRec128[0];
@@ -8592,12 +8592,12 @@ class ue_speaker_config1 : public dsp {
 			fRec135[1] = fRec135[0];
 			fRec134[1] = fRec134[0];
 			fRec132[1] = fRec132[0];
+			fRec146[1] = fRec146[0];
+			fRec144[1] = fRec144[0];
 			fRec143[1] = fRec143[0];
 			fRec141[1] = fRec141[0];
 			fRec149[1] = fRec149[0];
 			fRec147[1] = fRec147[0];
-			fRec146[1] = fRec146[0];
-			fRec144[1] = fRec144[0];
 		}
 	}
 
@@ -8605,8 +8605,8 @@ class ue_speaker_config1 : public dsp {
 
 #ifdef FAUST_UIMACROS
 	
-	#define FAUST_FILE_NAME "ue.speaker_config1.dsp"
-	#define FAUST_CLASS_NAME "ue_speaker_config1"
+	#define FAUST_FILE_NAME "ue.speaker.dsp"
+	#define FAUST_CLASS_NAME "ue_speaker"
 	#define FAUST_INPUTS 25
 	#define FAUST_OUTPUTS 5
 	#define FAUST_ACTIVES 0
@@ -12455,7 +12455,7 @@ class dsp_poly : public decorator_dsp, public midi, public JSONControl {
  * Dynamic voice allocation is done in 'getFreeVoice'
  */
 
-class ue_speaker_config1_poly : public dsp_voice_group, public dsp_poly {
+class ue_speaker_poly : public dsp_voice_group, public dsp_poly {
 
     private:
 
@@ -12574,7 +12574,7 @@ class ue_speaker_config1_poly : public dsp_voice_group, public dsp_poly {
         static void panic(FAUSTFLOAT val, void* arg)
         {
             if (val == FAUSTFLOAT(1)) {
-                static_cast<ue_speaker_config1_poly*>(arg)->allNotesOff(true);
+                static_cast<ue_speaker_poly*>(arg)->allNotesOff(true);
             }
         }
 
@@ -12593,7 +12593,7 @@ class ue_speaker_config1_poly : public dsp_voice_group, public dsp_poly {
         /**
          * Constructor.
          *
-         * @param dsp - the dsp to be used for one voice. Beware: ue_speaker_config1_poly will use and finally delete the pointer.
+         * @param dsp - the dsp to be used for one voice. Beware: ue_speaker_poly will use and finally delete the pointer.
          * @param nvoices - number of polyphony voices, should be at least 1
          * @param control - whether voices will be dynamically allocated and controlled (typically by a MIDI controler).
          *                If false all voices are always running.
@@ -12603,7 +12603,7 @@ class ue_speaker_config1_poly : public dsp_voice_group, public dsp_poly {
          *                setGroup/getGroup methods can be used to set/get the group state.
          *
          */
-        ue_speaker_config1_poly(dsp* dsp,
+        ue_speaker_poly(dsp* dsp,
                    int nvoices,
                    bool control = false,
                    bool group = true)
@@ -12626,7 +12626,7 @@ class ue_speaker_config1_poly : public dsp_voice_group, public dsp_poly {
             dsp_voice_group::init();
         }
 
-        virtual ~ue_speaker_config1_poly()
+        virtual ~ue_speaker_poly()
         {
             for (int i = 0; i < getNumOutputs(); i++) {
                 delete[] fMixBuffer[i];
@@ -12692,9 +12692,9 @@ class ue_speaker_config1_poly : public dsp_voice_group, public dsp_poly {
             }
         }
 
-        virtual ue_speaker_config1_poly* clone()
+        virtual ue_speaker_poly* clone()
         {
-            return new ue_speaker_config1_poly(fDSP->clone(), int(fVoiceTable.size()), fVoiceControl, fGroupControl);
+            return new ue_speaker_poly(fDSP->clone(), int(fVoiceTable.size()), fVoiceControl, fGroupControl);
         }
 
         void compute(int count, FAUSTFLOAT** inputs, FAUSTFLOAT** outputs)
@@ -12918,7 +12918,7 @@ struct dsp_poly_factory : public dsp_factory {
      */
     dsp_poly* createPolyDSPInstance(int nvoices, bool control, bool group)
     {
-        dsp_poly* dsp_poly = new ue_speaker_config1_poly(fProcessFactory->createDSPInstance(), nvoices, control, group);
+        dsp_poly* dsp_poly = new ue_speaker_poly(fProcessFactory->createDSPInstance(), nvoices, control, group);
         if (fEffectFactory) {
             // the 'dsp_poly' object has to be controlled with MIDI, so kept separated from new dsp_sequencer(...) object
             return new dsp_poly_effect(dsp_poly, new dsp_sequencer(dsp_poly, fEffectFactory->createDSPInstance()));
@@ -12961,7 +12961,7 @@ typedef struct faust
     void** m_args;
     mspUI* m_dspUI;
     dsp* m_dsp;
-    ue_speaker_config1_poly* m_dsp_poly;
+    ue_speaker_poly* m_dsp_poly;
     void* m_control_outlet;
     char* m_json;
     t_systhread_mutex m_mutex;    
@@ -12994,7 +12994,7 @@ void faust_allocate(t_faust* x, int nvoices)
         #ifdef POST
         post("polyphonic DSP voices = %d", nvoices);
         #endif
-        x->m_dsp_poly = new ue_speaker_config1_poly(new ue_speaker_config1(), nvoices, true, true);
+        x->m_dsp_poly = new ue_speaker_poly(new ue_speaker(), nvoices, true, true);
     #ifdef POLY2
         x->m_dsp = new dsp_sequencer(x->m_dsp_poly, new effect());
     #else
@@ -13009,34 +13009,34 @@ void faust_allocate(t_faust* x, int nvoices)
         #endif
     #if (DOWN_SAMPLING > 0)
         #if (FILTER_TYPE == 0)
-            x->m_dsp = new dsp_down_sampler<Identity<Double<1,1>, DOWN_SAMPLING>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_down_sampler<Identity<Double<1,1>, DOWN_SAMPLING>>(new ue_speaker());
         #elif (FILTER_TYPE == 1)
-            x->m_dsp = new dsp_down_sampler<LowPass3<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_down_sampler<LowPass3<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker());
         #elif (FILTER_TYPE == 2)
-            x->m_dsp = new dsp_down_sampler<LowPass4<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_down_sampler<LowPass4<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker());
         #elif (FILTER_TYPE == 3)
-            x->m_dsp = new dsp_down_sampler<LowPass3e<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_down_sampler<LowPass3e<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker());
         #elif (FILTER_TYPE == 4)
-            x->m_dsp = new dsp_down_sampler<LowPass6eé<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_down_sampler<LowPass6eé<Double<45,100>, DOWN_SAMPLING, double>>(new ue_speaker());
         #else
             #error "ERROR : Filter type must be in [0..4] range"
         #endif
     #elif (UP_SAMPLING > 0)
         #if (FILTER_TYPE == 0)
-            x->m_dsp = new dsp_up_sampler<Identity<Double<1,1>, UP_SAMPLING>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_up_sampler<Identity<Double<1,1>, UP_SAMPLING>>(new ue_speaker());
         #elif (FILTER_TYPE == 1)
-            x->m_dsp = new dsp_up_sampler<LowPass3<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_up_sampler<LowPass3<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker());
         #elif (FILTER_TYPE == 2)
-            x->m_dsp = new dsp_up_sampler<LowPass4<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_up_sampler<LowPass4<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker());
         #elif (FILTER_TYPE == 3)
-            x->m_dsp = new dsp_up_sampler<LowPass3e<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_up_sampler<LowPass3e<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker());
         #elif (FILTER_TYPE == 4)
-            x->m_dsp = new dsp_up_sampler<LowPass6e<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker_config1());
+            x->m_dsp = new dsp_up_sampler<LowPass6e<Double<45,100>, UP_SAMPLING, double>>(new ue_speaker());
         #else
             #error "ERROR : Filter type must be in [0..4] range"
         #endif
     #else
-        x->m_dsp = new ue_speaker_config1();
+        x->m_dsp = new ue_speaker();
     #endif
     }
     
@@ -13244,7 +13244,7 @@ void* faust_new(t_symbol* s, short ac, t_atom* av)
     bool midi_sync = false;
     int nvoices = 0;
     
-    ue_speaker_config1* tmp_dsp = new ue_speaker_config1();
+    ue_speaker* tmp_dsp = new ue_speaker();
     MidiMeta::analyse(tmp_dsp, midi_sync, nvoices);
     delete tmp_dsp;
     
@@ -13574,7 +13574,7 @@ void ext_main(void* r)
     class_addmethod(c, (method)faust_assist, "assist", A_CANT, 0);
     class_addmethod(c, (method)faust_mute, "mute", A_GIMME, 0);
     
-    dsp* tmp_dsp = new ue_speaker_config1();
+    dsp* tmp_dsp = new ue_speaker();
     mspUI tmp_UI;
     tmp_dsp->buildUserInterface(&tmp_UI);
     
