@@ -10,4 +10,5 @@ Don't forget to add ue.spat folder in Max File Preferences
 # Ambisonic conventionning
 
 In Ambitools : component ordering : ACN
+
 				normalisation : N3D
