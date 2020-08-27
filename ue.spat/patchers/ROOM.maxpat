@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 757.0, 641.0, 414.0, 179.0 ],
+		"rect" : [ 757.0, 616.0, 423.0, 203.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 468.0, 109.0, 29.5, 22.0 ],
+					"patching_rect" : [ 468.0, 66.0, 29.5, 22.0 ],
 					"text" : "1"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 464.0, 72.0, 58.0, 22.0 ],
+					"patching_rect" : [ 464.0, 29.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -69,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 520.0, 113.0, 45.0, 22.0 ],
+					"patching_rect" : [ 520.0, 70.0, 45.0, 22.0 ],
 					"text" : "store 1"
 				}
 
@@ -81,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 537.0, 72.0, 61.0, 22.0 ],
+					"patching_rect" : [ 537.0, 29.0, 61.0, 22.0 ],
 					"text" : "savebang"
 				}
 
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 484.0, 143.0, 181.0, 35.0 ],
+					"patching_rect" : [ 484.0, 100.0, 181.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -523,20 +523,57 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "ue.room.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "rooms.json",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/datas",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/datas",
 				"patcherrelativepath" : "../datas",
 				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
-		"autosave" : 0
+		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "ksliderWhite",
+				"default" : 				{
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "newobjBlue-1",
+				"default" : 				{
+					"accentcolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "newobjGreen-1",
+				"default" : 				{
+					"accentcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "numberGold-1",
+				"default" : 				{
+					"accentcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ]
 	}
 
 }

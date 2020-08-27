@@ -17,6 +17,7 @@ class SPATTEMPLATE01_API ASpatRoom : public ATriggerBox
 
 public:
 	ASpatRoom();
+	virtual void PostRegisterAllCompenents();
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	int uniqueRoomID;
 

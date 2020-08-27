@@ -5,6 +5,10 @@
 
 ASpatSound::ASpatSound()
 {
-	uniqueID = GetUniqueID();
 
+}
+
+ASpatSound::PostRegisterAllComponents()
+{
+	uniqueID = GetUniqueID();
 }

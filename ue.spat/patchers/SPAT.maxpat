@@ -156,7 +156,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 427.0, 250.0, 640.0, 480.0 ],
+						"rect" : [ 34.0, 250.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -185,6 +185,40 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 795.75, 197.0, 78.0, 22.0 ],
+									"text" : "s game_start"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 777.25, 114.0, 56.0, 22.0 ],
+									"text" : "route 0 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 777.25, 158.0, 75.0, 22.0 ],
+									"text" : "s game_end"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"id" : "obj-6",
@@ -269,15 +303,15 @@
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 49.0, 78.0, 586.0, 22.0 ],
+									"numoutlets" : 5,
+									"outlettype" : [ "", "", "", "", "" ],
+									"patching_rect" : [ 49.0, 78.0, 990.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
 									}
 ,
-									"text" : "spat5.osc.route /actor /source /room"
+									"text" : "spat5.osc.route /actor /source /room /game"
 								}
 
 							}
@@ -299,6 +333,27 @@
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"source" : [ "obj-11", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-4", 3 ]
 								}
 
 							}
@@ -449,49 +504,49 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "PARSING_SOURCES_DATAS_FAUST.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "script_disconnector.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "script_release.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "head_rotation.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "change_ID.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "PARSING_REVERB.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ue.room.datas.send.maxpat",
-				"bootpath" : "~/Documents/STAGE_UNREAL/Spat4Unreal_release/ue.spat/patchers",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -566,8 +621,8 @@
 				"name" : "Default M4L",
 				"default" : 				{
 					"fontsize" : [ 11.0 ],
-					"fontname" : [ "Arial Bold" ],
-					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ]
+					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
+					"fontname" : [ "Arial Bold" ]
 				}
 ,
 				"parentstyle" : "",
@@ -577,8 +632,8 @@
 				"name" : "Default M4L Poletti",
 				"default" : 				{
 					"fontsize" : [ 10.0 ],
-					"fontname" : [ "Arial Bold" ],
-					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ]
+					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
+					"fontname" : [ "Arial Bold" ]
 				}
 ,
 				"parentstyle" : "",
@@ -588,7 +643,6 @@
 				"name" : "Default M4L-1",
 				"default" : 				{
 					"fontsize" : [ 11.0 ],
-					"fontname" : [ "Arial" ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -598,6 +652,7 @@
 						"proportion" : 0.39
 					}
 ,
+					"fontname" : [ "Arial" ],
 					"fontface" : [ 1 ]
 				}
 ,
@@ -630,7 +685,6 @@
 				"name" : "jbb",
 				"default" : 				{
 					"fontsize" : [ 9.0 ],
-					"fontname" : [ "Arial" ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -639,7 +693,8 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-
+,
+					"fontname" : [ "Arial" ]
 				}
 ,
 				"parentstyle" : "",

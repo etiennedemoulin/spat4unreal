@@ -17,6 +17,7 @@ class SPATTEMPLATE01_API ASpatSound : public ATriggerSphere
 	
 public:
 	ASpatSound();
+	virtual void PostRegisterAllComponents();
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	int uniqueID;
 

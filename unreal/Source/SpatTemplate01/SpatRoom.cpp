@@ -5,5 +5,9 @@
 
 ASpatRoom::ASpatRoom()
 {
+}
+
+void ASpatRoom::PostRegisterAllComponents()
+{
 	uniqueRoomID = GetUniqueID();
 }
