@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 600.0, 743.0 ],
+		"rect" : [ 728.0, 81.0, 600.0, 743.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,26 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-3",
-					"index" : 1,
-					"maxclass" : "outlet",
+					"id" : "obj-11679",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 331.0, 191.0, 30.0, 30.0 ]
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 298.5, 155.0, 67.0, 22.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"text" : "thispatcher"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-135",
-					"maxclass" : "newobj",
+					"comment" : "",
+					"id" : "obj-3",
+					"index" : 0,
+					"maxclass" : "outlet",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 266.0, 150.0, 67.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
+					"numoutlets" : 0,
+					"patching_rect" : [ 331.0, 191.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -81,7 +81,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 562.0, 79.0, 1195.0, 746.0 ],
+						"rect" : [ 761.0, 120.0, 1195.0, 746.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -109,6 +109,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-26",
@@ -253,7 +254,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1875.0, 401.666666746139526, 131.0, 34.0 ],
-									"text" : "script newdefault $2 $1 300 ue.player.faust $3"
+									"text" : "script newdefault $2 $1 300 poly~ audio.source"
 								}
 
 							}
@@ -1311,7 +1312,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 804.5, 412.0, 140.0, 49.0 ],
+									"patching_rect" : [ 804.5, 412.0, 145.0, 49.0 ],
 									"text" : "prepend script newdefault spat5-route 100 150 spat5.osc.route"
 								}
 
@@ -1940,7 +1941,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 266.0, 108.0, 84.0, 22.0 ],
+					"patching_rect" : [ 266.0, 109.0, 84.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1957,31 +1958,13 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 100.0, 40.0, 30.0, 30.0 ],
 					"varname" : "inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 100.0, 150.0, 91.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "spat5.osc.route",
-					"varname" : "spat5-route"
 				}
 
 			}
@@ -1995,14 +1978,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-135", 0 ],
+					"destination" : [ "obj-11679", 0 ],
 					"source" : [ "obj-132", 1 ]
 				}
 
@@ -2014,21 +1990,23 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"source" : [ "obj-132", 0 ]
-				}
-
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "script_disconnector.maxpat",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
 , 			{
-				"patchline" : 				{
-					"destination" : [ "obj-132", 0 ],
-					"source" : [ "obj-34", 0 ]
-				}
-
+				"name" : "script_release.maxpat",
+				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

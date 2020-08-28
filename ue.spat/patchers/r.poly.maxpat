@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 946.0, 79.0, 460.0, 743.0 ],
+		"rect" : [ 43.0, 204.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,88 +40,95 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
+					"comment" : "",
+					"id" : "obj-3",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 14.0, -1.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 41.0, 110.0, 22.0 ],
-					"text" : "poly~ audio.source"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 14.0, 75.0, 72.0, 22.0 ],
+					"text" : "prepend set"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-7",
-					"index" : 0,
+					"id" : "obj-1",
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 362.0, 30.0, 30.0 ]
+					"patching_rect" : [ 14.25, 152.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 14.25, 114.0, 19.0, 22.0 ],
+					"text" : "r"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 14.0, 36.0, 118.0, 22.0 ],
+					"text" : "combine x _ #1"
 				}
 
 			}
  ],
-		"lines" : [  ],
-		"parameters" : 		{
-			"obj-4.1::obj-46::obj-7" : [ "live.dial[1014]", "el", 0 ],
-			"obj-4.1::obj-46::obj-9" : [ "live.dial[1013]", "az", 0 ],
-			"parameterbanks" : 			{
-
-			}
-,
-			"parameter_overrides" : 			{
-				"obj-4.1::obj-46::obj-7" : 				{
-					"parameter_longname" : "live.dial[1014]"
-				}
-,
-				"obj-4.1::obj-46::obj-9" : 				{
-					"parameter_longname" : "live.dial[1013]"
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "audio.source.maxpat",
-				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
 			}
 , 			{
-				"name" : "r.poly.maxpat",
-				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
 			}
 , 			{
-				"name" : "ue.dist.maxpat",
-				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "s.poly.maxpat",
-				"bootpath" : "~/Documents/GitHub/spat4unreal/ue.spat/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "ue.source~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "circle.mxo",
-				"type" : "iLaX"
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
 			}
  ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{
