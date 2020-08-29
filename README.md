@@ -37,4 +37,9 @@ component ordering : ACN
 
 normalisation : N3D
 
+# OSC conventionning
+
+`/source <instance> <cue> <location X> <location Y> <location Z> <name> <volume> <fade in> <fade out> <innerRadius> <fallofDistance>`
+	
+
 
